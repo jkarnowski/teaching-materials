@@ -14,7 +14,7 @@
 $(document).ready(function(){
     $('pre').addClass('prettyprint').attr('tabIndex', 0);
     prettyPrint();
-    
+
     var fathom = $('#presentation').fathom({
         onActivateSlide: function() {
             var $slide = $(this);
@@ -26,39 +26,48 @@ $(document).ready(function(){
 </head>
 <body>
   <div id="presentation">
-  
+
    <div id="presentation-counter"></div>
-      
+
    <div id="slides">
-   
-    
-    
-    <div class="slide section"> 
+
+
+
+    <div class="slide section">
      <header><h1>Intro to JavaScript</header>
-    </div> 
-    
-    
-   
-    
-    
-    
-    <div class="slide normal"> 
-     <header><h1>The Language of the Web</h1></header> 
-     <section class="content"> 
+     <section class="content">
+     <h2>What You Will Learn</h2>
+     <ul>
+         <li>The 5 data types</li>
+         <li>how to declare and update variables</li>
+         <li>how to declare and invoke functions</li>
+         <li>setup logic with conditionals</li>
+     </ul>
+     </section>
+    </div>
+
+
+
+
+
+
+    <div class="slide normal">
+     <header><h1>The Language of the Web</h1></header>
+     <section class="content">
      <img class="center" src="http://dl.dropbox.com/u/10998095/Screenshots/2nwgi5~b8656.png">
 
 <p>Also used for plug-in scripting (Adobe/Mozilla/Chrome), game scripting, and <a href="http://en.wikipedia.org/wiki/JavaScript#Uses_outside_web_pages">more</a>.
-</p> 
+</p>
      </section>
     </div>
-    
-   
-    
-    
-    
-    <div class="slide normal"> 
-     <header><h1>The History of JS</h1></header> 
-     <section class="content"> 
+
+
+
+
+
+    <div class="slide normal">
+     <header><h1>The History of JS</h1></header>
+     <section class="content">
      <ul>
   <img class="border" style="float:right;">
  <li> <b>1995:</b> At Netscape, Brendan Eich created "LiveScript", which gets renamed to "JavaScript".
@@ -79,33 +88,33 @@ We’ll use parts that are solid and have been around for a long time
 
      </section>
     </div>
-    
-   
-    
-    
-    
-    <div class="slide normal"> 
-     <header><h1>What can JS do?</h1></header> 
-     <section class="content"> 
-    
+
+
+
+
+
+    <div class="slide normal">
+     <header><h1>What can JS do?</h1></header>
+     <section class="content">
+
 <ul>
  <img class="border" src="http://nandokakimoto.files.wordpress.com/2009/01/maps.gif?w=640" style="float:right">
  <li>Image switchers and <a href="http://dev.sencha.com/playpen/ext-core-latest/examples/lightbox/">lightboxes</a>
  <li>Full featured <a href="http://www.grooveshark.com">web applications</a>
- <li>Keep track of users with cookies 
+ <li>Keep track of users with cookies
  <li>Interactive elements like tabs, sliders and accordions
  <li>Drawing and animation
  <li>Mind blowing awesomeness like this
      </section>
     </div>
-    
-   
-    
-    
-    
-    <div class="slide normal"> 
-     <header><h1>Statements</h1></header> 
-     <section class="content"> 
+
+
+
+
+
+    <div class="slide normal">
+     <header><h1>Statements</h1></header>
+     <section class="content">
 <p>Each instruction in JS is a "statement", like:</p>
 <pre>console.log('Hello World!');</pre>
 
@@ -119,14 +128,14 @@ Let's add a simple statement to our script tags and see what happens...
 
      </section>
     </div>
-    
-   
-    
-    
-    
-    <div class="slide normal"> 
-     <header><h1>Variables</h1></header> 
-     <section class="content"> 
+
+
+
+
+
+    <div class="slide normal">
+     <header><h1>Variables</h1></header>
+     <section class="content">
      <p>Use variables to store values.</p>
 <p>Declare, then initialize in 2 statements:</p>
 <pre>
@@ -153,21 +162,21 @@ If its not assigned, it's undefined.
 </p>
      </section>
     </div>
-    
-   
-    
-    
-    
-    <div class="slide normal"> 
-     <header><h1>Primitive Data Types</h1></header> 
-     <section class="content"> 
+
+
+
+
+
+    <div class="slide normal">
+     <header><h1>Primitive Data Types</h1></header>
+     <section class="content">
      <p style="display:none;">Variables can store different "types" of data, like:</p>
 <ul>
  <li><b>string:</b> an immutable string of characters:
 <pre>var greeting = 'Hello Kitty';
 var restaurant = "Pamela's Place";
 </pre>
- <li><b>number:</b> whole (6, -102) or floating point (5.8737): 
+ <li><b>number:</b> whole (6, -102) or floating point (5.8737):
 <pre>var myAge = 28;
 var pi = 3.14;
 </pre>
@@ -189,14 +198,14 @@ http://www.daaq.net/old/javascript/index.php?page=js+data+types&parent=core+java
 </p>
      </section>
     </div>
-    
-   
-    
-    
-    
-    <div class="slide normal"> 
-     <header><h1>Variable Names</h1></header> 
-     <section class="content"> 
+
+
+
+
+
+    <div class="slide normal">
+     <header><h1>Variable Names</h1></header>
+     <section class="content">
      <ul>
  <li>Begin with letters, $ or _
  <li>Only contain letters, numbers, $ and _
@@ -216,14 +225,14 @@ var 2coolForSchool, soHappy!
 </pre>
      </section>
     </div>
-    
-   
-    
-    
-    
-    <div class="slide normal"> 
-     <header><h1>Expressions</h1></header> 
-     <section class="content"> 
+
+
+
+
+
+    <div class="slide normal">
+     <header><h1>Expressions</h1></header>
+     <section class="content">
      <p>Variables can also store the result of any "expression":</p>
 <pre>
 var x = 2 + 2;
@@ -239,14 +248,14 @@ var formalGreeting = greeting + ', ' + title;
 
      </section>
     </div>
-    
-   
-    
-    
-    
-    <div class="slide normal"> 
-     <header><h1>Loose Typing</h1></header> 
-     <section class="content"> 
+
+
+
+
+
+    <div class="slide normal">
+     <header><h1>Loose Typing</h1></header>
+     <section class="content">
      <p>JS figures out the type based on value, and the type can change:</p>
 <pre>
 var x;
@@ -265,28 +274,28 @@ console.log(typeof y);
 
      </section>
     </div>
-    
-   
-    
-    
-    
-    <div class="slide normal"> 
+
+
+
+
+
+    <div class="slide normal">
      <h1 class="center"><a target="_blank" href="../exercises/variables.html">Exercise Time!</a></h1>
     </div>
-    
-   
-    
-    
-    
-    <div class="slide normal"> 
-     <header><h1>Comments</h1></header> 
-     <section class="content"> 
+
+
+
+
+
+    <div class="slide normal">
+     <header><h1>Comments</h1></header>
+     <section class="content">
      <p>Comments are human-readable text ignored by the computer:</p>
 <pre>
 // You can write single-line comments
 var x = 4; // Or you can comment after a statement
 
-/* 
+/*
   Or you can write multi-line comments, if you have something very long
   to say like this gratuitously long description.
 */
@@ -297,14 +306,14 @@ When to use comments
 </p>
      </section>
     </div>
-    
-   
-    
-    
-    
-    <div class="slide normal"> 
-     <header><h1>Functions</h1></header> 
-     <section class="content"> 
+
+
+
+
+
+    <div class="slide normal">
+     <header><h1>Functions</h1></header>
+     <section class="content">
      <p>Functions are re-usable collections of statements.</p>
 
 <p>First declare the function:</p>
@@ -327,14 +336,14 @@ Side effects.
 </p>
      </section>
     </div>
-    
-   
-    
-    
-    
-    <div class="slide normal"> 
-     <header><h1>Beware: Circular Dependancies</h1></header> 
-     <section class="content"> 
+
+
+
+
+
+    <div class="slide normal">
+     <header><h1>Beware: Circular Dependancies</h1></header>
+     <section class="content">
      <pre>
 function chicken() {
     egg();
@@ -349,10 +358,10 @@ egg();
 </pre>
      </section>
     </div>
-    
-    <div class="slide normal"> 
-     <header><h1>Arguments</h1></header> 
-     <section class="content"> 
+
+    <div class="slide normal">
+     <header><h1>Arguments</h1></header>
+     <section class="content">
      <p>Functions can accept any number of named arguments:</p>
 <pre>
 function sayMyName(name) {
@@ -386,13 +395,13 @@ In the function call, we insert our argument values in the brackets...
 PIRATE JOKE!!
 </pre>
      </section>
-    </div>   
-    
-    
-    
-    <div class="slide normal"> 
-     <header><h1>Return Values</h1></header> 
-     <section class="content"> 
+    </div>
+
+
+
+    <div class="slide normal">
+     <header><h1>Return Values</h1></header>
+     <section class="content">
      <p>The return keyword returns a value to whoever calls the function (and exits the function):</p>
 <pre>
 function addNumbers(num1, num2) {
@@ -418,20 +427,20 @@ If we assign a function call to a variable, it's value will be the result of run
 </p>
      </section>
     </div>
-    
-   
-    
-    
-    
 
-    
-   
-    
-    
-    
-    <div class="slide normal"> 
-     <header><h1>Variable Scope</h1></header> 
-     <section class="content"> 
+
+
+
+
+
+
+
+
+
+
+    <div class="slide normal">
+     <header><h1>Variable Scope</h1></header>
+     <section class="content">
      <p>JS Variables have "function scope". They are visible in the function where they're defined:</p>
 
 <p>A variable with "local" scope:</p>
@@ -457,14 +466,14 @@ console.log(globalResult);
 
      </section>
     </div>
-    
-   
-    
-    
-    
-    <div class="slide normal"> 
-     <header><h1>Coding Conventions: Spacing</h1></header> 
-     <section class="content"> 
+
+
+
+
+
+    <div class="slide normal">
+     <header><h1>Coding Conventions: Spacing</h1></header>
+     <section class="content">
      <p>Use newlines between statements and use spaces to show blocks.</p>
 
 <p>Bad:</p>
@@ -484,30 +493,30 @@ function addNumbers(num1, num2) {
 </pre>
      </section>
     </div>
-    
-   
-    
-    
-    
-    <div class="slide normal"> 
+
+
+
+
+
+    <div class="slide normal">
      <h1 class="center"><a target="_blank" href="../exercises/functions.html">Exercise Time!</a></h1>
     </div>
-    
-   
-    
-    
-    
-    <div class="slide normal"> 
-     <header><h1>Getting Help</h1></header> 
-     <section class="content"> 
+
+
+
+
+
+    <div class="slide normal">
+     <header><h1>Getting Help</h1></header>
+     <section class="content">
      <p>Google for questions or check <a href="https://developer.mozilla.org/en/JavaScript/Guide">Mozilla Developer Network</a> and <a href="http://www.w3schools.com/js/default.asp">W3Schools</a>.</p>
 
 <p>Post problematic code on <a href="http://jsfiddle.net/">JSFiddle</a> and share the link.</p>
     <img class="fill" src="http://davidwalsh.name/dw-content/jsfiddle.jpg">
      </section>
     </div>
-    
-   
+
+
    </div>
  </body>
 </html>
